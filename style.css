@@ -87,5 +87,21 @@ dialog{
 
 .cardBook{
     width: 500px;
-    background-color: blue;
+    background-color: white;
+    border-radius: 15px 15px;
+}
+button{
+    background-color: #e9e9ed;
+    border: none;
+    width: 110px;
+    height: 40px;
+}
+.main{
+    font-family: "Playwrite RO", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    position: relative;
+    left: 20%;
 }

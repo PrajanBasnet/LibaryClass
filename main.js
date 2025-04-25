@@ -16,7 +16,6 @@ closebtn.addEventListener("click", () => {
     dialog.close();
 })
 
-let libary = []
 let idd = 0;
 class Book {
     constructor(author, bookTitle, pages, read) {
@@ -30,20 +29,18 @@ class Book {
 
         const newDiv = document.createElement("div");
         newDiv.innerHTML = `
-            <h3>${author.value} </h3>
-            <h5> ${bookTitle.value} </h5>
-            <h5> ${this.pages} </h5>
-            <p> ${this.read} </p>  
+        <div class="main">
+            <h3>Author: ${author.value} </h3>
+            <h5>Title:  ${bookTitle.value} </h5>
+            <h5>Pages: ${this.pages} </h5>
              <p onclick='changeRead(${idd})' class='r${idd}'>${this.read}</p>
-            <br>
-            <button onclick='deleteBook(${idd})' > Delete </button>
             
+            <button onclick='deleteBook(${idd})' > Delete </button>
+            </div>
         `
         newDiv.setAttribute("id",idd);
         idd += 1;
-        console.log(idd)
-        let test = document.querySelector(".test");
-     
+        console.log(idd) 
         newDiv.className = "cardBook";
       
         card.appendChild(newDiv)
