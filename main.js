@@ -14,7 +14,7 @@ addBook.addEventListener("click",()=>{
 })
 closebtn.addEventListener("click",()=>{
     dialog.close();
-})
+    })
 
 
 class Book{
@@ -24,15 +24,30 @@ class Book{
         this.pages = pages;
     }
 
-    displayAuthor(){
-        console.log("Author***",this.author);
+    displayBook(){
+        let card = document.querySelector(".card");
+
+        const newDiv = document.createElement("div");
+        newDiv.innerHTML = `
+            <h3>${author.value} </h3>
+            <h5> ${bookTitle.value} </h5>
+        `
+        newDiv.className = "cardBook";
+       
+
+        card.appendChild(newDiv)
     }
+
+}
+
+class AddBook extends Book{
+
 }
 
 submit.addEventListener("click",(event)=>{
     event.preventDefault();
     let newBook = new Book(author.value);
-    newBook.displayAuthor()
+    newBook.displayBook()
 })
 
 

@@ -78,3 +78,14 @@ dialog{
     padding: 2em;
 
 }
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cardBook{
+    width: 500px;
+    background-color: blue;
+}
